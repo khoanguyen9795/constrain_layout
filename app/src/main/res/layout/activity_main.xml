@@ -8,13 +8,14 @@
     tools:context=".MainActivity">
 
     <TextView
-        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_chainStyle="spread"
         android:id="@+id/view1"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/view2"
         android:textSize="20sp"
-        android:layout_width="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="View 1" />
 
@@ -24,7 +25,8 @@
         app:layout_constraintLeft_toRightOf="@+id/view1"
         app:layout_constraintRight_toLeftOf="@+id/view3"
         android:textSize="20sp"
-        android:layout_width="wrap_content"
+        app:layout_constraintHorizontal_weight="9"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="View 2" />
     <TextView
@@ -33,9 +35,19 @@
         app:layout_constraintLeft_toRightOf="@+id/view2"
         app:layout_constraintRight_toRightOf="parent"
         android:textSize="20sp"
-        android:layout_width="wrap_content"
+        app:layout_constraintHorizontal_weight="4"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="View 3" />
+    <TextView
+        android:id="@+id/view4"
+       app:layout_constraintTop_toBottomOf="@+id/view1"
+        app:layout_constraintLeft_toLeftOf="@+id/view1"
+        android:textSize="20sp"
+        app:layout_constraintHorizontal_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="View 4" />
 
 
 
