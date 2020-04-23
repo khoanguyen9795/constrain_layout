@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:textSize="20sp"
         android:background="#f20"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:text="View 1" />
 
@@ -25,18 +25,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="91.5dp" />
+        app:layout_constraintGuide_begin="150dp" />
 
     <TextView
         android:gravity="center"
         android:id="@+id/view2"
-        app:layout_constraintTop_toBottomOf="@+id/view1"
-        app:layout_constraintBottom_toTopOf="@+id/guideline1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline1"
+        app:layout_constraintTop_toBottomOf="@+id/view1"
+        app:layout_constraintBottom_toBottomOf="parent"
         android:textSize="20sp"
         android:background="#00796B"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:text="View 2" />
 
@@ -44,19 +44,19 @@
         android:id="@+id/guideline1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="182dp" />
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="80dp" />
 
     <TextView
         android:gravity="center"
         android:id="@+id/view3"
-        app:layout_constraintTop_toBottomOf="@+id/view2"
+        app:layout_constraintTop_toBottomOf="@+id/view1"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/view2"
         app:layout_constraintEnd_toEndOf="parent"
         android:textSize="20sp"
-        android:background="#388E3C"
-        android:layout_width="match_parent"
+        android:background="#AFB42B"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:text="View 3" />
 
@@ -65,19 +65,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="273dp" />
+        app:layout_constraintGuide_begin="510dp" />
 
 
     <TextView
         android:gravity="center"
         android:id="@+id/view4"
         app:layout_constraintTop_toBottomOf="@+id/view3"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toEndOf="@+id/view2"
+        app:layout_constraintBottom_toBottomOf="parent"
         android:textSize="20sp"
-        android:background="#FBC02D"
-        android:layout_width="match_parent"
+        android:background="#388E3C"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:text="View 4" />
 
@@ -85,87 +85,25 @@
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="360dp" />
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="250dp" />
 
     <TextView
         android:gravity="center"
-        android:id="@+id/view5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/view4"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view4"
-        app:layout_constraintEnd_toStartOf="@+id/guideline4"
         android:textSize="20sp"
-        android:background="#7B1FA2"
+        android:background="#0288D1"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:text="View 5" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="105dp" />
 
-    <TextView
-        android:gravity="center"
-        android:id="@+id/view6"
-        app:layout_constraintStart_toEndOf="@+id/view5"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view4"
-        app:layout_constraintEnd_toStartOf="@+id/guideline5"
-        android:textSize="20sp"
-        android:background="#303F9F"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="View 6" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="210dp" />
 
-    <TextView
-        android:gravity="center"
-        android:id="@+id/view7"
-        app:layout_constraintStart_toEndOf="@+id/view6"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view4"
-        app:layout_constraintEnd_toStartOf="@+id/guideline6"
-        android:textSize="20sp"
-        android:background="#E64A19"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="View 7" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="315dp" />
-
-    <TextView
-        android:gravity="center"
-        app:layout_constraintStart_toEndOf="@+id/view7"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view4"
-        app:layout_constraintEnd_toStartOf="@+id/guideline7"
-        android:textSize="20sp"
-        android:background="#00796B"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="View 8" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="420dp" />
 
 
 
